@@ -3,7 +3,7 @@
  *  @version 1.0
  *  Descripción: Clase que representa un nodo de un árbol binario de búsqueda
  *  Fecha de creación: 14/03/2025
- *  Fecha de última modificación: 16/03/2025
+ *  Fecha de última modificación: 26/03/2025
  */
 
 
@@ -14,6 +14,11 @@ public class Node<K,V> {
     private Node<K,V> left;
     private Node<K,V> right;
 
+    /**
+     * Constructor de la clase Node
+     * @param key Clave del nodo
+     * @param value Valor del nodo
+     */
     public Node(K key, V value) {
         this.key = key;
         this.value = value;
