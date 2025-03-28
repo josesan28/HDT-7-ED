@@ -3,7 +3,7 @@
  *  @version 1.0
  *  Descripción: Clase principal que ejecuta el programa
  *  Fecha de creación: 22/03/2025
- *  Fecha de última modificación: 26/03/2025
+ *  Fecha de última modificación: 27/03/2025
  */
 
 import java.util.Scanner;
@@ -77,7 +77,7 @@ public class StoreManager {
         String name = scanner.nextLine();
         System.out.print("Ingresa la descripción del producto: ");
         String description = scanner.nextLine();
-        System.out.print("Ingresa las tallas del producto: ");
+        System.out.print("Ingresa las tallas en formato xs:10|s:20|m:30|l:40|xl:50: ");
         String sizes = scanner.nextLine();
         Product product = new Product(SKU, name, description, Product.parseSizes(sizes));
         btSKU.insert(SKU, product);
@@ -109,7 +109,7 @@ public class StoreManager {
                     break;
                 
                 case "2":
-                    System.out.print("Ingresa las nuevas tallas en formato (xs:10|s:20|m:30|l:40|xl:50): ");
+                    System.out.print("Ingresa las nuevas tallas en formato xs:10|s:20|m:30|l:40|xl:50: ");
                     String sizes = scanner.nextLine();
                     product.setSizes(Product.parseSizes(sizes));
                     System.out.println("Tallas actualizadas");
